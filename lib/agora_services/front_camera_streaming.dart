@@ -157,6 +157,13 @@ class _FrontReciverStreamIntermediateState extends State<FrontReciverStreamInter
     initAgora();
   }
 
+  @override
+  void dispose() {
+    _client.release();
+    
+    super.dispose();
+  }
+
   void setClient() async {
     _client = AgoraClient(
       agoraConnectionData: AgoraConnectionData(

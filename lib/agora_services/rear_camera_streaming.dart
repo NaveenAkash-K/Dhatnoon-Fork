@@ -189,6 +189,8 @@ class _BackReciverStreamIntermediateState extends State<BackReciverStreamInterme
     initAgora();
   }
 
+
+
   void setClient() async {
     _client = AgoraClient(
       agoraConnectionData: AgoraConnectionData(
@@ -200,6 +202,12 @@ class _BackReciverStreamIntermediateState extends State<BackReciverStreamInterme
     );
   }
 
+  @override
+  void dispose() {
+    _client.release();
+    
+    super.dispose();
+  }
   void initAgora() async {
     await _client.initialize();
   }

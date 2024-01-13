@@ -58,9 +58,9 @@ class _VideoPageState extends State<VideoPage> {
             child: VideoProgressIndicator(controller,
                 allowScrubbing: true,
                 colors: VideoProgressColors(
-                  backgroundColor: Colors.redAccent,
-                  playedColor: Colors.green,
-                  bufferedColor: Colors.purple,
+                  backgroundColor: Color.fromARGB(255, 192, 192, 192),
+                  playedColor: Color.fromARGB(255, 130, 147, 255),
+                  bufferedColor: const Color.fromARGB(255, 104, 104, 104),
                 ))),
         Container(
           child: Row(

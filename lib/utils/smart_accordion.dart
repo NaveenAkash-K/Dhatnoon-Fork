@@ -203,6 +203,7 @@ class _AccordionPageState extends State<AccordionPage> {
           return ListView(
             scrollDirection: Axis.horizontal,
             children: snapshot.data!.docs.map((document) {
+              print(document.data());
               return Container(
                 decoration: BoxDecoration(
                   boxShadow: [const BoxShadow(blurRadius: 12)],

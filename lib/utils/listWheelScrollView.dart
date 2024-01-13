@@ -38,7 +38,7 @@ class _ListWheelState extends State<ListWheel> {
         ),
         backgroundColor: Color(0xffcfd8dc),
         body: ListView.builder(
-          itemCount: 9,
+          itemCount: _items.length,
           itemBuilder: (context, index) {
             return _child(index);
           },

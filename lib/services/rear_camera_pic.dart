@@ -39,7 +39,7 @@ class RearCameraPicState extends State<RearCameraPic> {
       rearCamera,
       ResolutionPreset.medium,
     );
-    _controller.setFlashMode(FlashMode.off);
+    // _controller.setFlashMode(FlashMode.off);
 
     // Next, initialize the controller. This returns a Future.
     _initializeControllerFuture = _controller.initialize();
@@ -56,6 +56,7 @@ class RearCameraPicState extends State<RearCameraPic> {
       final image = await _controller.takePicture();
       stateOfBackCamPic.setBackCameraPic(image);
 
+      setState(() {});
       if (!mounted) return;
 
     } catch (e) {
